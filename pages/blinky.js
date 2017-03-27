@@ -10,9 +10,6 @@ export default class extends React.Component {
     }
 
     componentDidMount() {
-        var assetpath = function(filename) {
-            return '/static/assets/' + filename
-        }
 
         var MeshFactory = React.createFactory(ReactTHREE.Mesh)
         var LineSegmentsFactory = React.createFactory(ReactTHREE.LineSegments)
