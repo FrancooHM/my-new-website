@@ -60,14 +60,19 @@ var _class = function (_React$Component) {
             var MeshFactory = _react2.default.createFactory(_reactThree2.default.Mesh);
             var LineSegmentsFactory = _react2.default.createFactory(_reactThree2.default.LineSegments);
 
-            var icosaedronGeometry = new THREE.IcosahedronGeometry(200, 0);
+            var icosaedronGeometry1 = new THREE.IcosahedronGeometry(200, 0);
+            var icosaedronGeometry2 = new THREE.IcosahedronGeometry(200, 2);
 
-            var lineSegmentsGeometry = new THREE.EdgesGeometry(icosaedronGeometry); // or WireframeGeometry( geometry )
+            var lineSegmentsGeometry1 = new THREE.EdgesGeometry(icosaedronGeometry1); // or WireframeGeometry( geometry )
+            var lineSegmentsGeometry2 = new THREE.EdgesGeometry(icosaedronGeometry2); // or WireframeGeometry( geometry )
             var lineSegmentsMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 0.5 });
 
-            var Cupcake = _react2.default.createClass({
-                displayName: 'Cupcake',
-
+            var Cupcake1 = _react2.default.createClass({
+                displayName: 'Cupcake1',
+                propTypes: {
+                    position: _react2.default.PropTypes.instanceOf(THREE.Vector3),
+                    quaternion: _react2.default.PropTypes.instanceOf(THREE.Quaternion).isRequired
+                },
                 render: function render() {
                     /* You can stack ReactTHREE childrens on this createElement */
                     return _react2.default.createElement(_reactThree2.default.Object3D, {
@@ -75,7 +80,26 @@ var _class = function (_React$Component) {
                         position: this.props.position || new THREE.Vector3(0, 0, 0)
                     }, LineSegmentsFactory({
                         position: new THREE.Vector3(0, 100, 0),
-                        geometry: lineSegmentsGeometry,
+                        geometry: lineSegmentsGeometry1,
+                        material: lineSegmentsMaterial
+                    }));
+                }
+            });
+
+            var Cupcake2 = _react2.default.createClass({
+                displayName: 'Cupcake2',
+                propTypes: {
+                    position: _react2.default.PropTypes.instanceOf(THREE.Vector3),
+                    quaternion: _react2.default.PropTypes.instanceOf(THREE.Quaternion).isRequired
+                },
+                render: function render() {
+                    /* You can stack ReactTHREE childrens on this createElement */
+                    return _react2.default.createElement(_reactThree2.default.Object3D, {
+                        quaternion: this.props.quaternion,
+                        position: this.props.position || new THREE.Vector3(0, 0, 0)
+                    }, LineSegmentsFactory({
+                        position: new THREE.Vector3(0, 100, 0),
+                        geometry: lineSegmentsGeometry2,
                         material: lineSegmentsMaterial
                     }));
                 }
@@ -102,11 +126,11 @@ var _class = function (_React$Component) {
                         width: this.props.width,
                         height: this.props.height,
                         camera: 'maincamera'
-                    }, MainCameraElement, _react2.default.createElement(Cupcake, this.props.icosaedron)), _react2.default.createElement(_reactThree2.default.Scene, {
+                    }, MainCameraElement, _react2.default.createElement(Cupcake1, this.props.icosaedron)), _react2.default.createElement(_reactThree2.default.Scene, {
                         width: this.props.width,
                         height: this.props.height,
                         camera: 'maincamera'
-                    }, MainCameraElement, _react2.default.createElement(Cupcake, this.props.icosaedron2)));
+                    }, MainCameraElement, _react2.default.createElement(Cupcake2, this.props.icosaedron2)));
                 }
             });
 
@@ -151,7 +175,7 @@ var _class = function (_React$Component) {
         key: 'render',
         value: function render() {
 
-            return _react2.default.createElement('div', null, _react2.default.createElement(_head2.default, null, _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/blinky.css' })), _react2.default.createElement('div', { id: 'three-box' }));
+            return _react2.default.createElement('div', null, _react2.default.createElement(_head2.default, null, _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/blinky.css' })), _react2.default.createElement('div', { id: 'three-box' }), _react2.default.createElement('div', { className: 'magical-text-wrapper' }, _react2.default.createElement('h3', { className: 'animated fadeIn magical-text' }, 'Get things done, make things better.')));
         }
     }]);
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import ReactTHREE, {Renderer, Scene, PerspectiveCamera, Cupcake} from 'react-three'
+import ReactTHREE, {Renderer, Scene, PerspectiveCamera} from 'react-three'
 import * as THREE from 'three'
 
 export default class extends React.Component {
@@ -14,13 +14,15 @@ export default class extends React.Component {
         var MeshFactory = React.createFactory(ReactTHREE.Mesh)
         var LineSegmentsFactory = React.createFactory(ReactTHREE.LineSegments)
 
-        var icosaedronGeometry = new THREE.IcosahedronGeometry(200, 0)
+        var icosaedronGeometry1 = new THREE.IcosahedronGeometry(200, 0)
+        var icosaedronGeometry2 = new THREE.IcosahedronGeometry(200, 2)
 
-        var lineSegmentsGeometry = new THREE.EdgesGeometry(icosaedronGeometry); // or WireframeGeometry( geometry )
+        var lineSegmentsGeometry1 = new THREE.EdgesGeometry(icosaedronGeometry1); // or WireframeGeometry( geometry )
+        var lineSegmentsGeometry2 = new THREE.EdgesGeometry(icosaedronGeometry2); // or WireframeGeometry( geometry )
         var lineSegmentsMaterial = new THREE.LineBasicMaterial({color: 0xffffff, linewidth: 0.5});
 
-        var Cupcake = React.createClass({
-            displayName: 'Cupcake',
+        var Cupcake1 = React.createClass({
+            displayName: 'Cupcake1',
             propTypes: {
                 position: React.PropTypes.instanceOf(THREE.Vector3),
                 quaternion: React.PropTypes.instanceOf(THREE.Quaternion).isRequired
@@ -32,7 +34,26 @@ export default class extends React.Component {
                     position: this.props.position || new THREE.Vector3(0, 0, 0)
                 }, LineSegmentsFactory({
                     position: new THREE.Vector3(0, 100, 0),
-                    geometry: lineSegmentsGeometry,
+                    geometry: lineSegmentsGeometry1,
+                    material: lineSegmentsMaterial
+                }))
+            }
+        })
+
+        var Cupcake2 = React.createClass({
+            displayName: 'Cupcake2',
+            propTypes: {
+                position: React.PropTypes.instanceOf(THREE.Vector3),
+                quaternion: React.PropTypes.instanceOf(THREE.Quaternion).isRequired
+            },
+            render: function() {
+                /* You can stack ReactTHREE childrens on this createElement */
+                return React.createElement(ReactTHREE.Object3D, {
+                    quaternion: this.props.quaternion,
+                    position: this.props.position || new THREE.Vector3(0, 0, 0)
+                }, LineSegmentsFactory({
+                    position: new THREE.Vector3(0, 100, 0),
+                    geometry: lineSegmentsGeometry2,
                     material: lineSegmentsMaterial
                 }))
             }
@@ -59,11 +80,11 @@ export default class extends React.Component {
                     width: this.props.width,
                     height: this.props.height,
                     camera: 'maincamera'
-                }, MainCameraElement, React.createElement(Cupcake, this.props.icosaedron)), React.createElement(ReactTHREE.Scene, {
+                }, MainCameraElement, React.createElement(Cupcake1, this.props.icosaedron)), React.createElement(ReactTHREE.Scene, {
                     width: this.props.width,
                     height: this.props.height,
                     camera: 'maincamera'
-                }, MainCameraElement, React.createElement(Cupcake, this.props.icosaedron2))))
+                }, MainCameraElement, React.createElement(Cupcake2, this.props.icosaedron2))))
             }
         })
 
@@ -112,7 +133,9 @@ export default class extends React.Component {
                 <Head>
                     <link rel="stylesheet" type="text/css" href="/static/blinky.css"/>
                 </Head>
-                <div id="three-box">
+                <div id="three-box"></div>
+                <div className="magical-text-wrapper">
+                    <h3 className="animated fadeIn magical-text">Get things done, make things better.</h3>
                 </div>
             </div>
         )
