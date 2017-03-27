@@ -2,7 +2,7 @@ const express = require('express')
 const next = require('next')
 
 const dev = process.env.NODE_ENV !== 'production'
-const port = process.env.PORT || '3000'
+const port = process.env.PORT || '80'
 
 console.log("Getting env.PORT: " + port);
 const app = next({
@@ -18,8 +18,8 @@ app.prepare()
             return app.render(req, res, '/index', req.query)
         })
 
-        server.get('/about', (req, res) => {
-            return app.render(req, res, '/about', req.query)
+        server.get('/contact', (req, res) => {
+            return app.render(req, res, '/contact', req.query)
         })
 
         server.get('/blinky', (req, res) => {

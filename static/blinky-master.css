@@ -7,6 +7,7 @@ body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #000;
 }
 
 a {
@@ -25,44 +26,47 @@ nav a {
 /* unvisited link */
 
 nav a:link, a:link {
-    color: black;
+    color: #fff;
+    background-color: #000;
 }
 
 
 /* visited link */
 
 nav a:visited, a:visited {
-    color: black;
+    color: #fff;
+    background-color: #000;
 }
 
 
 /* mouse over link */
 
 nav div.button:hover {
-    color: white;
-    background-color: black;
+    color: #000;
+    background-color: #fff;
 }
 
 nav div.button:hover a {
-    color: white;
-    background-color: black;
+    color: #000;
+    background-color: #fff;
 }
 
 
 /* selected link */
 
 nav a:active {
-    color: white;
-    background-color: black;
+    color: #000;
+    background-color: #fff;
 }
 
 nav div.active {
-    color: white;
-    background-color: black;
+    color: #000;
+    background-color: #fff;
 }
 
 nav div.active a {
-    color: white;
+    color: #000;
+    background-color: #fff;
 }
 
 nav {
@@ -79,7 +83,8 @@ nav {
     margin: 0;
 }
 
-#__nav {}
+#__nav {
+}
 
 div.button {
     background-color: #fff;
@@ -99,14 +104,6 @@ section.main {
     -webkit-box-align: center;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
 }
 
 #__next, #__next div {

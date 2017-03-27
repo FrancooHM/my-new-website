@@ -1,0 +1,7 @@
+#three-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* animate */
+    -vendor-animation-duration: 10s;
+}

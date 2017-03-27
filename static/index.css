@@ -1,0 +1,15 @@
+.fluid-center {
+    /*This is because the overflow hidden, is not rendering 2ems of window (because of the navbar button padding)*/
+    /*and flex is centering without taking care of that*/
+    margin-top: -5em;
+}
+
+h1, h3, h6 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
