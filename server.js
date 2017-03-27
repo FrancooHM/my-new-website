@@ -2,7 +2,8 @@ const express = require('express')
 const next = require('next')
 
 const dev = process.env.NODE_ENV !== 'production'
-const port = process.env.PORT || '80'
+const port = process.env.PORT || 3000
+const host = process.env.HOST || '0.0.0.0'
 
 console.log("Getting env.PORT: " + port);
 const app = next({
@@ -31,7 +32,7 @@ app.prepare()
         })
 
 
-        server.listen(port, (err) => {
+        server.listen(port, host, (err) => {
             if (err) throw err
             console.log('> Ready on http://localhost:' + port)
         })
