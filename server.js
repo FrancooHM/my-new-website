@@ -23,8 +23,8 @@ app.prepare()
             return app.render(req, res, '/contact', req.query)
         })
 
-        server.get('/blinky', (req, res) => {
-            return app.render(req, res, '/blinky', req.query)
+        server.get('/goodbye', (req, res) => {
+            return app.render(req, res, '/goodbye', req.query)
         })
 
         server.get('*', (req, res) => {

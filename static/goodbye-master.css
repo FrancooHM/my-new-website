@@ -1,0 +1,116 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    font-family: "Rubik", Arial, Helvetica;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+nav a {
+    width: 100%;
+    height: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+/* unvisited link */
+
+nav a:link, a:link {
+    color: #fff;
+    background-color: #000;
+}
+
+
+/* visited link */
+
+nav a:visited, a:visited {
+    color: #fff;
+    background-color: #000;
+}
+
+
+/* mouse over link */
+
+nav div.button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+nav div.button:hover a {
+    color: #000;
+    background-color: #fff;
+}
+
+
+/* selected link */
+
+nav a:active {
+    color: #000;
+    background-color: #fff;
+}
+
+nav div.active {
+    color: #000;
+    background-color: #fff;
+}
+
+nav div.active a {
+    color: #000;
+    background-color: #fff;
+}
+
+nav {
+    list-style-type: none;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+#__nav {
+}
+
+div.button {
+    background-color: #fff;
+    text-align: center;
+    height: 100%;
+    flex: 1;
+}
+
+section.main {
+    height: 100%;
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#__next, #__next div {
+    min-height: 100%;
+    height: 100%;
+    min-width: : 100%;
+    width: : 100%;
+}

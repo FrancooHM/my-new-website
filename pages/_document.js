@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
         const {html} = renderPage()
         var home = ""
         var contact = ""
-        var blinky = ""
+        var goodbye = ""
 
         switch (pathname) {
             case "/index":
@@ -19,8 +19,8 @@ export default class MyDocument extends Document {
                 contact = "active"
                 break;
 
-            case "/blinky":
-                blinky = "active"
+            case "/goodbye":
+                goodbye = "active"
                 break;
             default:
                 home = true
@@ -31,26 +31,26 @@ export default class MyDocument extends Document {
             active: {
                 home,
                 contact,
-                blinky
+                goodbye
             },
             pathname
         }
     }
 
     setCSSHeaders = (pathname) => {
-        if (pathname === "/blinky") {
+        if (pathname === "/goodbye") {
             return (
                 <Head>
                     <title>Franco Rabglia Website</title>
                     <meta name="robots" content="Index follow"/>
                     <meta name="title" content="Franco Rabglia Website"/>
-                    <meta name="description" content="Franco Rabalgia personal web site"/>
+                    <meta name="description" content="Franco Rabalgia Website"/>
                     <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
                     <meta name="author" content="Franco Rabalgia"/>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-                    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet"/>
+                    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
                     <link rel="stylesheet" type="text/css" href="/static/normalize.css"/>
-                    <link rel="stylesheet" type="text/css" href="/static/blinky-master.css"/>
+                    <link rel="stylesheet" type="text/css" href="/static/goodbye-master.css"/>
                     <link rel="stylesheet" type="text/css" href="/static/index.css"/>
                     <link rel="stylesheet" type="text/css" href="/static/animate.css"/>
                 </Head>
@@ -61,11 +61,11 @@ export default class MyDocument extends Document {
                     <title>Franco Rabglia Website</title>
                     <meta name="robots" content="Index follow"/>
                     <meta name="title" content="Franco Rabglia Website"/>
-                    <meta name="description" content="Franco Rabalgia personal web site"/>
+                    <meta name="description" content="Franco Rabalgia Website"/>
                     <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
                     <meta name="author" content="Franco Rabalgia"/>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-                    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet"/>
+                    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
                     <link rel="stylesheet" type="text/css" href="/static/normalize.css"/>
                     <link rel="stylesheet" type="text/css" href="/static/master.css"/>
                     <link rel="stylesheet" type="text/css" href="/static/index.css"/>
@@ -75,6 +75,7 @@ export default class MyDocument extends Document {
         }
 
     }
+
     render() {
         return (
             <html>
@@ -91,9 +92,9 @@ export default class MyDocument extends Document {
                                 SAY HI!
                             </Link>
                         </div>
-                        <div className={"button " + this.props.active.blinky}>
-                            <Link prefetch href="/blinky" as="/blinky">
-                                BLINKY GOODBYE
+                        <div className={"button " + this.props.active.goodbye}>
+                            <Link prefetch href="/goodbye" as="/goodbye">
+                                GOODBYE
                             </Link>
                         </div>
                     </nav>

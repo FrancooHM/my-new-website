@@ -16,20 +16,20 @@ export default class extends React.Component {
                         <link rel="stylesheet" type="text/css" href="/static/index.css"/>
                     </Head>
                     <h1>See my work on</h1>
-                    <ul>
+
                         <a href="https://www.github.com/francoohm" target="_blank">
-                            <li>Github</li>
+                            <h3>Github</h3>
                         </a>
                         <a href="https://www.linkedin.com/in/francorabaglia/" target="_blank">
-                            <li>Linkedin</li>
+                            <h3>Linkedin</h3>
                         </a>
-                    </ul>
-                    <h1>Say hi me on</h1>
-                    <ul>
+
+                    <h1>Say me hi on</h1>
+
                         <a href="https://www.twitter.com/franco_rabaglia/" target="_blank">
-                            <li>Twitter</li>
+                            <h3>Twitter</h3>
                         </a>
-                    </ul>
+
                 </span>
             </section>
         )

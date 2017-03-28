@@ -57,10 +57,10 @@ var MyDocument = function (_Document) {
         }
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MyDocument.__proto__ || (0, _getPrototypeOf2.default)(MyDocument)).call.apply(_ref, [this].concat(args))), _this), _this.setCSSHeaders = function (pathname) {
-            if (pathname === "/blinky") {
-                return _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'Franco Rabglia Website'), _react2.default.createElement('meta', { name: 'robots', content: 'Index follow' }), _react2.default.createElement('meta', { name: 'title', content: 'Franco Rabglia Website' }), _react2.default.createElement('meta', { name: 'description', content: 'Franco Rabalgia personal web site' }), _react2.default.createElement('meta', { name: 'keywords', content: 'developer,javascript,fullstack,lead,senior,engineer' }), _react2.default.createElement('meta', { name: 'author', content: 'Franco Rabalgia' }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width' }), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700', rel: 'stylesheet' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/normalize.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/blinky-master.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/index.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/animate.css' }));
+            if (pathname === "/goodbye") {
+                return _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'Franco Rabglia Website'), _react2.default.createElement('meta', { name: 'robots', content: 'Index follow' }), _react2.default.createElement('meta', { name: 'title', content: 'Franco Rabglia Website' }), _react2.default.createElement('meta', { name: 'description', content: 'Franco Rabalgia Website' }), _react2.default.createElement('meta', { name: 'keywords', content: 'developer,javascript,fullstack,lead,senior,engineer' }), _react2.default.createElement('meta', { name: 'author', content: 'Franco Rabalgia' }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width' }), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Rubik:400,700', rel: 'stylesheet' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/normalize.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/goodbye-master.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/index.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/animate.css' }));
             } else {
-                return _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'Franco Rabglia Website'), _react2.default.createElement('meta', { name: 'robots', content: 'Index follow' }), _react2.default.createElement('meta', { name: 'title', content: 'Franco Rabglia Website' }), _react2.default.createElement('meta', { name: 'description', content: 'Franco Rabalgia personal web site' }), _react2.default.createElement('meta', { name: 'keywords', content: 'developer,javascript,fullstack,lead,senior,engineer' }), _react2.default.createElement('meta', { name: 'author', content: 'Franco Rabalgia' }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width' }), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700', rel: 'stylesheet' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/normalize.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/master.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/index.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/animate.css' }));
+                return _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'Franco Rabglia Website'), _react2.default.createElement('meta', { name: 'robots', content: 'Index follow' }), _react2.default.createElement('meta', { name: 'title', content: 'Franco Rabglia Website' }), _react2.default.createElement('meta', { name: 'description', content: 'Franco Rabalgia Website' }), _react2.default.createElement('meta', { name: 'keywords', content: 'developer,javascript,fullstack,lead,senior,engineer' }), _react2.default.createElement('meta', { name: 'author', content: 'Franco Rabalgia' }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width' }), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Rubik:400,700', rel: 'stylesheet' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/normalize.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/master.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/index.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/animate.css' }));
             }
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
@@ -68,7 +68,7 @@ var MyDocument = function (_Document) {
     (0, _createClass3.default)(MyDocument, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('html', null, this.setCSSHeaders(this.props.pathname), _react2.default.createElement('body', null, _react2.default.createElement('nav', { id: '__nav', className: 'animated fadeIn' }, _react2.default.createElement('div', { className: "button " + this.props.active.home }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/', as: '/' }, 'HOME')), _react2.default.createElement('div', { className: "button " + this.props.active.contact }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/contact', as: '/contact' }, 'SAY HI!')), _react2.default.createElement('div', { className: "button " + this.props.active.blinky }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/blinky', as: '/blinky' }, 'BLINKY GOODBYE'))), _react2.default.createElement(_document.Main, { className: 'full-height' }), _react2.default.createElement(_document.NextScript, null)));
+            return _react2.default.createElement('html', null, this.setCSSHeaders(this.props.pathname), _react2.default.createElement('body', null, _react2.default.createElement('nav', { id: '__nav', className: 'animated fadeIn' }, _react2.default.createElement('div', { className: "button " + this.props.active.home }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/', as: '/' }, 'HOME')), _react2.default.createElement('div', { className: "button " + this.props.active.contact }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/contact', as: '/contact' }, 'SAY HI!')), _react2.default.createElement('div', { className: "button " + this.props.active.goodbye }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/goodbye', as: '/goodbye' }, 'GOODBYE'))), _react2.default.createElement(_document.Main, { className: 'full-height' }), _react2.default.createElement(_document.NextScript, null)));
         }
     }], [{
         key: 'getInitialProps',
@@ -81,7 +81,7 @@ var MyDocument = function (_Document) {
 
             var home = "";
             var contact = "";
-            var blinky = "";
+            var goodbye = "";
 
             switch (pathname) {
                 case "/index":
@@ -92,8 +92,8 @@ var MyDocument = function (_Document) {
                     contact = "active";
                     break;
 
-                case "/blinky":
-                    blinky = "active";
+                case "/goodbye":
+                    goodbye = "active";
                     break;
                 default:
                     home = true;
@@ -104,7 +104,7 @@ var MyDocument = function (_Document) {
                 active: {
                     home: home,
                     contact: contact,
-                    blinky: blinky
+                    goodbye: goodbye
                 },
                 pathname: pathname
             };
