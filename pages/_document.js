@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
                     <title>Franco Rabglia Website</title>
                     <meta name="robots" content="Index follow"/>
                     <meta name="title" content="Franco Rabglia Website"/>
-                    <meta name="description" content="Franco Rabalgia Website. Powered by > TravisCI <."/>
+                    <meta name="description" content="Franco Rabalgia Website."/>
                     <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
                     <meta name="author" content="Franco Rabalgia"/>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
