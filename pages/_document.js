@@ -84,21 +84,21 @@ export default class MyDocument extends Document {
                     <nav id="__nav" className="animated fadeIn">
                         <div className={"button " + this.props.active.home}>
                             <Link prefetch href="/" as="/">
-                                HOME
+                                <a>HOME</a>
                             </Link>
                         </div>
                         <div className={"button " + this.props.active.contact}>
                             <Link prefetch href="/contact" as="/contact">
-                                SAY HI!
+                                <a>SAY HI!</a>
                             </Link>
                         </div>
                         <div className={"button " + this.props.active.goodbye}>
                             <Link prefetch href="/goodbye" as="/goodbye">
-                                GOODBYE
+                                <a>GOODBYE</a>
                             </Link>
                         </div>
                     </nav>
-                    <Main className="full-height"/>
+                    <Main/>
                     <NextScript/>
                 </body>
             </html>

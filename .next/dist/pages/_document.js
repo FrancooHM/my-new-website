@@ -201,7 +201,12 @@ var MyDocument = function (_Document) {
                     fileName: _jsxFileName,
                     lineNumber: 86
                 }
-            }, 'HOME')), _react2.default.createElement('div', { className: "button " + this.props.active.contact, __source: {
+            }, _react2.default.createElement('a', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 87
+                }
+            }, 'HOME'))), _react2.default.createElement('div', { className: "button " + this.props.active.contact, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 90
                 }
@@ -209,7 +214,12 @@ var MyDocument = function (_Document) {
                     fileName: _jsxFileName,
                     lineNumber: 91
                 }
-            }, 'SAY HI!')), _react2.default.createElement('div', { className: "button " + this.props.active.goodbye, __source: {
+            }, _react2.default.createElement('a', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 92
+                }
+            }, 'SAY HI!'))), _react2.default.createElement('div', { className: "button " + this.props.active.goodbye, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 95
                 }
@@ -217,7 +227,13 @@ var MyDocument = function (_Document) {
                     fileName: _jsxFileName,
                     lineNumber: 96
                 }
-            }, 'GOODBYE'))), _react2.default.createElement(_document.Main, { className: 'full-height', __source: {
+            }, _react2.default.createElement('a', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 97
+                }
+            }, 'GOODBYE')))), _react2.default.createElement(_document.Main, {
+                __source: {
                     fileName: _jsxFileName,
                     lineNumber: 101
                 }
