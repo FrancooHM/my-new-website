@@ -30,6 +30,9 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = "/Users/francoagustinrabaglia/Develop/Next apps/my-new-website/pages/index.js?entry";
+
+
 var _class = function (_React$Component) {
     (0, _inherits3.default)(_class, _React$Component);
 
@@ -42,7 +45,38 @@ var _class = function (_React$Component) {
     (0, _createClass3.default)(_class, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement("section", { className: "main" }, _react2.default.createElement("span", { className: "fluid-center" }, _react2.default.createElement("h1", null, "Franco Rabaglia"), _react2.default.createElement("h3", null, "Fullstack web developer"), _react2.default.createElement("h6", { className: "button" }, _react2.default.createElement("a", { href: "https://www.github.com/francoohm/my-new-website" }, _react2.default.createElement("u", null, "source")))));
+            return _react2.default.createElement("section", { className: "main", __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 11
+                }
+            }, _react2.default.createElement("span", { className: "fluid-center", __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 12
+                }
+            }, _react2.default.createElement("h1", {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 13
+                }
+            }, "Franco Rabaglia"), _react2.default.createElement("h3", {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 14
+                }
+            }, "Fullstack web developer."), _react2.default.createElement("h6", { className: "button", __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 15
+                }
+            }, _react2.default.createElement("a", { href: "https://www.github.com/francoohm/my-new-website", __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 16
+                }
+            }, _react2.default.createElement("u", {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 17
+                }
+            }, "source")))));
         }
     }]);
 
