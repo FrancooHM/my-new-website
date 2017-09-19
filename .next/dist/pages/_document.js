@@ -42,6 +42,9 @@ var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = '/Users/francoagustinrabaglia/Develop/Next apps/my-new-website/pages/_document.js?entry';
+
+
 var MyDocument = function (_Document) {
     (0, _inherits3.default)(MyDocument, _Document);
 
@@ -56,11 +59,151 @@ var MyDocument = function (_Document) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MyDocument.__proto__ || (0, _getPrototypeOf2.default)(MyDocument)).call.apply(_ref, [this].concat(args))), _this), _this.setCSSHeaders = function (pathname) {
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MyDocument.__proto__ || (0, _getPrototypeOf2.default)(MyDocument)).call.apply(_ref, [this].concat(args))), _this), _this.setHeaders = function (pathname) {
             if (pathname === "/goodbye") {
-                return _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'Franco Rabglia Website'), _react2.default.createElement('meta', { name: 'robots', content: 'Index follow' }), _react2.default.createElement('meta', { name: 'title', content: 'Franco Rabglia Website' }), _react2.default.createElement('meta', { name: 'description', content: 'Franco Rabalgia Website' }), _react2.default.createElement('meta', { name: 'keywords', content: 'developer,javascript,fullstack,lead,senior,engineer' }), _react2.default.createElement('meta', { name: 'author', content: 'Franco Rabalgia' }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width' }), _react2.default.createElement('link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }), _react2.default.createElement('link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Rubik:400,700', rel: 'stylesheet' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/normalize.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/goodbye-master.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/index.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/animate.css' }));
+                return _react2.default.createElement(_document.Head, {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 43
+                    }
+                }, _react2.default.createElement('title', {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 44
+                    }
+                }, 'Goodbye | Franco Rabglia Website'), _react2.default.createElement('meta', { name: 'robots', content: 'Index follow', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 45
+                    }
+                }), _react2.default.createElement('meta', { name: 'title', content: 'Franco Rabglia Website', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 46
+                    }
+                }), _react2.default.createElement('meta', { name: 'description', content: 'Franco Rabalgia Website', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 47
+                    }
+                }), _react2.default.createElement('meta', { name: 'keywords', content: 'developer,javascript,fullstack,lead,senior,engineer', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 48
+                    }
+                }), _react2.default.createElement('meta', { name: 'author', content: 'Franco Rabalgia', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 49
+                    }
+                }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 50
+                    }
+                }), _react2.default.createElement('link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 51
+                    }
+                }), _react2.default.createElement('link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 52
+                    }
+                }), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Rubik:400,700', rel: 'stylesheet', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 53
+                    }
+                }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/normalize.css', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 54
+                    }
+                }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/goodbye-master.css', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 55
+                    }
+                }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/index.css', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 56
+                    }
+                }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/animate.css', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 57
+                    }
+                }), _react2.default.createElement('script', { src: '/static/core.js', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 58
+                    }
+                }), _react2.default.createElement('script', { src: '/static/sw.js', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 59
+                    }
+                }));
             } else {
-                return _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'Franco Rabglia Website'), _react2.default.createElement('meta', { name: 'robots', content: 'Index follow' }), _react2.default.createElement('meta', { name: 'title', content: 'Franco Rabglia Website' }), _react2.default.createElement('meta', { name: 'description', content: 'Franco Rabalgia Website' }), _react2.default.createElement('meta', { name: 'keywords', content: 'developer,javascript,fullstack,lead,senior,engineer' }), _react2.default.createElement('meta', { name: 'author', content: 'Franco Rabalgia' }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width' }), _react2.default.createElement('link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }), _react2.default.createElement('link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Rubik:400,700', rel: 'stylesheet' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/normalize.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/master.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/index.css' }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/animate.css' }));
+                return _react2.default.createElement(_document.Head, {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 64
+                    }
+                }, _react2.default.createElement('title', {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 65
+                    }
+                }, 'Hi | Franco Rabglia Website'), _react2.default.createElement('meta', { name: 'robots', content: 'Index follow', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 66
+                    }
+                }), _react2.default.createElement('meta', { name: 'title', content: 'Franco Rabglia Website', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 67
+                    }
+                }), _react2.default.createElement('meta', { name: 'description', content: 'Franco Rabalgia Website', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 68
+                    }
+                }), _react2.default.createElement('meta', { name: 'keywords', content: 'developer,javascript,fullstack,lead,senior,engineer', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 69
+                    }
+                }), _react2.default.createElement('meta', { name: 'author', content: 'Franco Rabalgia', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 70
+                    }
+                }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 71
+                    }
+                }), _react2.default.createElement('link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 72
+                    }
+                }), _react2.default.createElement('link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 73
+                    }
+                }), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Rubik:400,700', rel: 'stylesheet', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 74
+                    }
+                }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/normalize.css', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 75
+                    }
+                }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/master.css', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 76
+                    }
+                }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/index.css', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 77
+                    }
+                }), _react2.default.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/static/animate.css', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 78
+                    }
+                }), _react2.default.createElement('script', { src: '/static/core.js', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 79
+                    }
+                }), _react2.default.createElement('script', { src: '/static/sw.js', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 80
+                    }
+                }));
             }
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
@@ -68,7 +211,54 @@ var MyDocument = function (_Document) {
     (0, _createClass3.default)(MyDocument, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('html', null, this.setCSSHeaders(this.props.pathname), _react2.default.createElement('body', null, _react2.default.createElement('nav', { id: '__nav', className: 'animated fadeIn' }, _react2.default.createElement('div', { className: "button " + this.props.active.home }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/', as: '/' }, 'HOME')), _react2.default.createElement('div', { className: "button " + this.props.active.contact }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/contact', as: '/contact' }, 'SAY HI!')), _react2.default.createElement('div', { className: "button " + this.props.active.goodbye }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/goodbye', as: '/goodbye' }, 'GOODBYE'))), _react2.default.createElement(_document.Main, { className: 'full-height' }), _react2.default.createElement(_document.NextScript, null)));
+            return _react2.default.createElement('html', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 89
+                }
+            }, this.setHeaders(this.props.pathname), _react2.default.createElement('body', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 91
+                }
+            }, _react2.default.createElement('nav', { id: '__nav', className: 'animated fadeIn', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 92
+                }
+            }, _react2.default.createElement('div', { className: "button " + this.props.active.home, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 93
+                }
+            }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/', as: '/', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 94
+                }
+            }, 'HOME')), _react2.default.createElement('div', { className: "button " + this.props.active.contact, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 98
+                }
+            }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/contact', as: '/contact', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 99
+                }
+            }, 'SAY HI!')), _react2.default.createElement('div', { className: "button " + this.props.active.goodbye, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 103
+                }
+            }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/goodbye', as: '/goodbye', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 104
+                }
+            }, 'GOODBYE'))), _react2.default.createElement(_document.Main, { className: 'full-height', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 109
+                }
+            }), _react2.default.createElement(_document.NextScript, {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 110
+                }
+            })));
         }
     }], [{
         key: 'getInitialProps',

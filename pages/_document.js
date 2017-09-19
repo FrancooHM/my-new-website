@@ -37,11 +37,11 @@ export default class MyDocument extends Document {
         }
     }
 
-    setCSSHeaders = (pathname) => {
+    setHeaders = (pathname) => {
         if (pathname === "/goodbye") {
             return (
                 <Head>
-                    <title>Franco Rabglia Website</title>
+                    <title>Goodbye | Franco Rabglia Website</title>
                     <meta name="robots" content="Index follow"/>
                     <meta name="title" content="Franco Rabglia Website"/>
                     <meta name="description" content="Franco Rabalgia Website"/>
@@ -55,12 +55,14 @@ export default class MyDocument extends Document {
                     <link rel="stylesheet" type="text/css" href="/static/goodbye-master.css"/>
                     <link rel="stylesheet" type="text/css" href="/static/index.css"/>
                     <link rel="stylesheet" type="text/css" href="/static/animate.css"/>
+                    <script src="/static/core.js"/>
+                    <script src="/static/sw.js"/>
                 </Head>
             )
         } else {
             return (
                 <Head>
-                    <title>Franco Rabglia Website</title>
+                    <title>Hi | Franco Rabglia Website</title>
                     <meta name="robots" content="Index follow"/>
                     <meta name="title" content="Franco Rabglia Website"/>
                     <meta name="description" content="Franco Rabalgia Website"/>
@@ -74,6 +76,8 @@ export default class MyDocument extends Document {
                     <link rel="stylesheet" type="text/css" href="/static/master.css"/>
                     <link rel="stylesheet" type="text/css" href="/static/index.css"/>
                     <link rel="stylesheet" type="text/css" href="/static/animate.css"/>
+                    <script src="/static/core.js"/>
+                    <script src="/static/sw.js"/>
                 </Head>
             )
         }
@@ -83,7 +87,7 @@ export default class MyDocument extends Document {
     render() {
         return (
             <html>
-                {this.setCSSHeaders(this.props.pathname)}
+                {this.setHeaders(this.props.pathname)}
                 <body>
                     <nav id="__nav" className="animated fadeIn">
                         <div className={"button " + this.props.active.home}>
