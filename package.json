@@ -13,6 +13,8 @@
         "dev": "next",
         "build": "next build",
         "start": "next start",
-        "start-prod": "pm2 server.js"
+        "start-prod": "pm2 start server.js",
+        "stop-prod": "pm2 stop server",
+        "restart-prod": "pm2 restart server"
     }
 }
