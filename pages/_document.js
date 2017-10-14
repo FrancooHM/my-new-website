@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
     var goodbye = ""
 
     switch (pathname) {
-      case "/index":
+      case "/":
         home = "active"
         break;
 
