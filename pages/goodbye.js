@@ -1,179 +1,98 @@
 import React from 'react'
 import Head from 'next/head'
-import ReactTHREE, {Renderer, Scene, PerspectiveCamera} from 'react-three'
 import * as THREE from 'three'
+const colors = [0x0000ff,0x00ff00,0xff0000,0xf0f000,0x00f0f0]
 
 export default class extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            webGlRenderer: ReactTHREE.Renderer
-        }
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    this.init()
+  }
+
+  init() {
+    // SETTING UP SCENE AND PERSPECTIVE MATRIX
+    const self = this
+    const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 1000)
+    const scene = new THREE.Scene()
+
+    // SETTING UP GEOMETRY AND MATERIAL
+    const icosaedronGeometry1 = new THREE.IcosahedronGeometry(200, 0)
+    const icosaedronGeometry2 = new THREE.IcosahedronGeometry(200, 2)
+    const lineSegmentsGeometry1 = new THREE.EdgesGeometry(icosaedronGeometry1);
+    const lineSegmentsGeometry2 = new THREE.EdgesGeometry(icosaedronGeometry2);
+    const lineSegmentsMaterial = new THREE.LineBasicMaterial({color: 0xffffff, linewidth: 0.5});
+    const mesh1 = new THREE.LineSegments(lineSegmentsGeometry1, lineSegmentsMaterial)
+    const mesh2 = new THREE.LineSegments(lineSegmentsGeometry2, lineSegmentsMaterial)
+
+    //SETTING UP THE RENDERER
+    const renderer = new THREE.WebGLRenderer()
+
+    //SETTING UP CAMERA POSIION
+    camera.position.z = 600
+
+    //ADDING ELEMENTS TO THE SCENE
+    scene.add(mesh1)
+    scene.add(mesh2)
+
+    // SETTING UP PIXEL RATIO AND CANVAS SIZE
+    renderer.setPixelRatio(window.devicePixelRatio)
+    renderer.setSize(window.innerWidth, window.innerHeight)
+
+    //APPENDING CANAS TO THE DOM
+    document.getElementById('webgl-wrapper').appendChild(renderer.domElement)
+
+    //ADDING WINDOWS RESIZE EVENT
+    window.addEventListener('resize', this.onWindowResize, false)
+
+    //ATTACHING ELEMENTS TO THE STATE SCOPE AND RUNING FIRST ANIMATION FRAME
+    this.setState({
+      camera,
+      scene,
+      renderer,
+      mesh1,
+      mesh2
+    }, animate)
+
+    function animate(t) {
+      let rotationangle = t * 0.001
+      requestAnimationFrame(animate)
+      self.state.mesh1.quaternion.setFromEuler(new THREE.Euler(rotationangle, rotationangle * 3, 0))
+      self.state.mesh1.position.x = 250 * Math.sin(rotationangle)
+      self.state.mesh1.position.y = 250 * Math.sin(-rotationangle*2)
+      self.state.mesh1.position.z = 200 * Math.sin(rotationangle*2.5)
+      self.state.mesh1.material.color.setHex(colors[Math.floor(Math.random()*colors.length)])
+      self.state.mesh2.quaternion.setFromEuler(new THREE.Euler(rotationangle, rotationangle * 3, 0))
+      self.state.mesh2.position.x = 250 * Math.sin(-rotationangle)
+      self.state.mesh2.position.y = 250 * Math.sin(rotationangle*2)
+      self.state.mesh2.position.z = 200 * Math.sin(-rotationangle*2.5)
+      self.state.mesh2.material.color.setHex(colors[Math.floor(Math.random()*colors.length)])
+      self.state.renderer.render(self.state.scene, self.state.camera)
     }
 
-    componentWillMount() {
-        this.setState({width: 0, height: 0});
-    }
+  }
 
-    componentDidMount() {
-        this.renderWebGL()
-    }
+  onWindowResize() {
+    this.state.camera.aspect = window.innerWidth / window.innerHeight
+    this.state.camera.updateProjectionMatrix()
+    this.state.renderer.setSize(window.innerWidth, window.innerHeight)
+  }
 
-    componentWillUnmount() {
+  render() {
 
-    }
-
-    updateDimensions = () => {
-        if (this.state.height === window.innerHeight && this.state.width === window.innerWidth) {
-            return
-        } else {
-            this.setState({width: window.innerWidth, height: window.innerHeight});
-            this.destroyWebGL()
-            this.renderWebGL()
-            console.log(this.state);
-        }
-    }
-
-    destroyWebGL = () => {
-        console.debug("destroying");
-        document.getElementById('webgl-wrapper').removeChild(document.getElementById('three-box'))
-
-    }
-    renderWebGL = () => {
-
-        var divWrapper = document.createElement('div')
-        divWrapper.id = 'three-box'
-        document.getElementById("webgl-wrapper").appendChild(divWrapper)
-
-        var MeshFactory = React.createFactory(ReactTHREE.Mesh)
-        var LineSegmentsFactory = React.createFactory(ReactTHREE.LineSegments)
-
-        var icosaedronGeometry1 = new THREE.IcosahedronGeometry(200, 0)
-        var icosaedronGeometry2 = new THREE.IcosahedronGeometry(200, 2)
-
-        var lineSegmentsGeometry1 = new THREE.EdgesGeometry(icosaedronGeometry1); // or WireframeGeometry( geometry )
-        var lineSegmentsGeometry2 = new THREE.EdgesGeometry(icosaedronGeometry2); // or WireframeGeometry( geometry )
-        var lineSegmentsMaterial = new THREE.LineBasicMaterial({color: 0xffffff, linewidth: 0.5});
-
-        var Cupcake1 = React.createClass({
-            displayName: 'Cupcake1',
-            propTypes: {
-                position: React.PropTypes.instanceOf(THREE.Vector3),
-                quaternion: React.PropTypes.instanceOf(THREE.Quaternion).isRequired
-            },
-            render: function() {
-                /* You can stack ReactTHREE childrens on this createElement */
-                return React.createElement(ReactTHREE.Object3D, {
-                    quaternion: this.props.quaternion,
-                    position: this.props.position || new THREE.Vector3(0, 0, 0)
-                }, LineSegmentsFactory({
-                    position: new THREE.Vector3(0, 100, 0),
-                    geometry: lineSegmentsGeometry1,
-                    material: lineSegmentsMaterial
-                }))
-            }
-        })
-
-        var Cupcake2 = React.createClass({
-            displayName: 'Cupcake2',
-            propTypes: {
-                position: React.PropTypes.instanceOf(THREE.Vector3),
-                quaternion: React.PropTypes.instanceOf(THREE.Quaternion).isRequired
-            },
-            render: function() {
-                /* You can stack ReactTHREE childrens on this createElement */
-                return React.createElement(ReactTHREE.Object3D, {
-                    quaternion: this.props.quaternion,
-                    position: this.props.position || new THREE.Vector3(0, 0, 0)
-                }, LineSegmentsFactory({
-                    position: new THREE.Vector3(0, 100, 0),
-                    geometry: lineSegmentsGeometry2,
-                    material: lineSegmentsMaterial
-                }))
-            }
-        })
-
-        var _state = this.state
-        var scene = React.createClass({
-            displayName: 'scene',
-            render: function() {
-                var MainCameraElement = React.createElement(ReactTHREE.PerspectiveCamera, {
-                    name: 'maincamera',
-                    fov: '75',
-                    aspect: this.props.width / this.props.height,
-                    near: 1,
-                    far: 5000,
-                    position: new THREE.Vector3(0, 0, 600),
-                    lookat: new THREE.Vector3(0, 0, 0)
-                })
-
-                return (React.createElement(_state.webGlRenderer, {
-                    width: this.props.width,
-                    height: this.props.height,
-                    background: 0x000000
-                }, React.createElement(ReactTHREE.Scene, {
-                    width: this.props.width,
-                    height: this.props.height,
-                    camera: 'maincamera'
-                }, MainCameraElement, React.createElement(Cupcake1, this.props.icosaedron)), React.createElement(ReactTHREE.Scene, {
-                    width: this.props.width,
-                    height: this.props.height,
-                    camera: 'maincamera'
-                }, MainCameraElement, React.createElement(Cupcake2, this.props.icosaedron2))))
-            }
-        })
-
-        var renderelement = document.getElementById("three-box")
-
-        var w = window.innerWidth
-        var h = window.innerHeight
-
-        var sceneProps = {
-            width: w,
-            height: h,
-            icosaedron: {
-                position: new THREE.Vector3(0, 0, 0),
-                quaternion: new THREE.Quaternion()
-            },
-            icosaedron2: {
-                position: new THREE.Vector3(0, 0, 0),
-                quaternion: new THREE.Quaternion()
-            }
-        }
-        var icosaedronProps = sceneProps.icosaedron
-        var icosaedronProps2 = sceneProps.icosaedron2
-        var rotationangle = 0
-
-        ReactTHREE.render(React.createElement(scene, sceneProps), renderelement)
-
-        function spinIcosaedrons(t) {
-            rotationangle = t * 0.001
-            icosaedronProps.quaternion.setFromEuler(new THREE.Euler(rotationangle, rotationangle * 3, 0))
-            icosaedronProps.position.x = 300 * Math.sin(rotationangle)
-            icosaedronProps2.quaternion.setFromEuler(new THREE.Euler(rotationangle, rotationangle * 3, 0))
-            icosaedronProps2.position.x = 300 * Math.sin(-rotationangle)
-
-            ReactTHREE.render(React.createElement(scene, sceneProps), renderelement)
-
-            requestAnimationFrame(spinIcosaedrons)
-        }
-
-        spinIcosaedrons()
-    }
-
-    render() {
-
-        return (
-            <div>
-                <Head>
-                    <link rel="stylesheet" type="text/css" href="/static/goodbye.css"/>
-                </Head>
-                <div id="webgl-wrapper"></div>
-                <div className="magical-text-wrapper">
-                    <h1 className="animated fadeIn magical-text">Get things done, make things better.</h1>
-                </div>
-            </div>
-        )
-    }
+    return (
+      <div>
+        <Head>
+          <link rel="stylesheet" type="text/css" href="/static/goodbye.css"/>
+        </Head>
+        <div id="webgl-wrapper"></div>
+        <div className="magical-text-wrapper">
+          <h1 className="animated fadeIn magical-text">Get things done, make things better.</h1>
+        </div>
+      </div>
+    )
+  }
 }

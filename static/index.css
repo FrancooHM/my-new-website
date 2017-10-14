@@ -1,17 +1,26 @@
+canvas {
+  width: 100%;
+  height: 100%
+}
+
+.full-height {
+  height: 100%;
+}
+
 .fluid-center {
-    /*This is because the overflow hidden, is not rendering 2ems of window (because of the navbar button padding)*/
-    /*and flex is centering without taking care of that*/
-    margin-top: -15%;
+  /*This is because the overflow hidden, is not rendering 2ems of window (because of the navbar button padding)*/
+  /*and flex is centering without taking care of that*/
+  margin-top: -15%;
 }
 
 h1, h3, h6 {
-    text-align: center;
-    font-family: "Rubik", Arial, Helvetica;
-    font-weight: 400;
+  text-align: center;
+  font-family: "Rubik", Arial, Helvetica;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 640px) {
-    h1 {
-        font-size: 2.5em;
-    }
+  h1 {
+    font-size: 2.5em;
+  }
 }
