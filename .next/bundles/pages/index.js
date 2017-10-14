@@ -1,0 +1,6 @@
+
+          window.__NEXT_REGISTER_PAGE('/', function() {
+            var comp = module.exports=webpackJsonp([4],{221:function(e,t,l){e.exports=l(222)},222:function(e,t,l){"use strict";function a(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var u=l(7),n=a(u),r=l(1),c=a(r),f=l(2),o=a(f),d=l(8),s=a(d),i=l(9),m=a(i),h=l(3),p=a(h),_=function(e){function t(e){return(0,c.default)(this,t),(0,s.default)(this,(t.__proto__||(0,n.default)(t)).call(this,e))}return(0,m.default)(t,e),(0,o.default)(t,[{key:"render",value:function(){return p.default.createElement("section",{className:"main"},p.default.createElement("span",{className:"fluid-center"},p.default.createElement("h1",null,"Franco Rabaglia"),p.default.createElement("h3",null,"Fullstack web developer"),p.default.createElement("h6",{className:"button"},p.default.createElement("a",{href:"https://www.github.com/francoohm/my-new-website"},p.default.createElement("u",null,"source")))))}}]),t}(p.default.Component);t.default=_}},[221]);
+            return { page: comp.default }
+          })
+        
