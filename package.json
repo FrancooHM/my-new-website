@@ -16,5 +16,8 @@
         "start-prod": "pm2 start server.js",
         "stop-prod": "pm2 stop server",
         "restart-prod": "pm2 restart server"
+    },
+    "devDependencies": {
+        "babel-preset-es2015": "^6.24.1"
     }
 }

@@ -15,6 +15,10 @@ export default class MyDocument extends Document {
         home = "active"
         break;
 
+      case "/index":
+        home = "active"
+        break;
+
       case "/contact":
         contact = "active"
         break;
@@ -23,7 +27,7 @@ export default class MyDocument extends Document {
         goodbye = "active"
         break;
       default:
-        home = true
+        home = "active"
     }
 
     return {

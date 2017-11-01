@@ -46,7 +46,7 @@ export default class extends React.Component {
     document.getElementById('webgl-wrapper').appendChild(renderer.domElement)
 
     //ADDING WINDOWS RESIZE EVENT
-    window.addEventListener('resize', this.onWindowResize, false)
+    window.addEventListener('resize', this.onWindowResize.bind(this), false)
 
     //ATTACHING ELEMENTS TO THE STATE SCOPE AND RUNING FIRST ANIMATION FRAME
     this.setState({
