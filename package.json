@@ -14,9 +14,10 @@
         "dev": "next",
         "build": "next build",
         "start-next": "next start",
-        "start": "pm2 start server.js",
-        "stop-prod": "pm2 stop server",
-        "restart-prod": "pm2 restart server"
+        "start": "NODE_ENV=production pm2 start server.js",
+        "list": "pm2 list",
+        "stop": "pm2 stop server",
+        "restart": "pm2 restart server"
     },
     "devDependencies": {
         "babel-preset-es2015": "^6.24.1"

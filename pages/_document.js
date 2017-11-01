@@ -58,10 +58,10 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
           <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
-          <link rel="stylesheet" type="text/css" href="/static/normalize.css"/>
-          <link rel="stylesheet" type="text/css" href="/static/goodbye-master.css"/>
-          <link rel="stylesheet" type="text/css" href="/static/index.css"/>
-          <link rel="stylesheet" type="text/css" href="/static/animate.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/normalize.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/goodbye-master.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/index.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/animate.css"/>
           <script src="/static/core.js"/>
           <script src="/static/sw.js"/>
         </Head>
@@ -79,10 +79,10 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
           <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
-          <link rel="stylesheet" type="text/css" href="/static/normalize.css"/>
-          <link rel="stylesheet" type="text/css" href="/static/master.css"/>
-          <link rel="stylesheet" type="text/css" href="/static/index.css"/>
-          <link rel="stylesheet" type="text/css" href="/static/animate.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/normalize.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/master.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/index.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/animate.css"/>
           <script src="/static/core.js"/>
           <script src="/static/sw.js"/>
         </Head>

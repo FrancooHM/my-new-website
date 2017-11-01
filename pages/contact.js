@@ -13,7 +13,7 @@ export default class extends React.Component {
             <section className="main">
                 <span className="fluid-center">
                     <Head>
-                        <link rel="stylesheet" type="text/css" href="/static/index.css"/>
+                        <link rel="stylesheet" type="text/css" href="/static/styles/index.css"/>
                     </Head>
                     <h1>See my work on</h1>
 
