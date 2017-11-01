@@ -2,6 +2,7 @@
     "dependencies": {
         "express": "^4.15.2",
         "next": "4.0.3",
+        "pm2": "^2.7.2",
         "react": "16",
         "react-dom": "16",
         "react-no-ssr": "^1.1.0",
@@ -12,8 +13,8 @@
     "scripts": {
         "dev": "next",
         "build": "next build",
-        "start": "next start",
-        "start-prod": "pm2 start server.js",
+        "start-next": "next start",
+        "start": "pm2 start server.js",
         "stop-prod": "pm2 stop server",
         "restart-prod": "pm2 restart server"
     },
