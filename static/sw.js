@@ -3,7 +3,7 @@ this.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
-          if (cacheName === 'v1') return true
+          if (cacheName === 'v2') return true
           else return false
           // Return true if you want to remove this cache,
           // but remember that caches are shared across
@@ -18,14 +18,14 @@ this.addEventListener('activate', function(event) {
 
 this.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v2').then(function(cache) {
+    caches.open('v3').then(function(cache) {
       return cache.addAll([
         '/',
-        '/static/index.css',
-        '/static/normalize.css',
-        '/static/master.css',
-        '/static/goodbye-master.css',
-        '/static/goodbye.css',
+        '/static/styles/index.css',
+        '/static/styles/normalize.css',
+        '/static/styles/master.css',
+        '/static/styles/goodbye-master.css',
+        '/static/styles/goodbye.css',
         '/static/core.js',
         '/static/favicon.ico',
       ])
