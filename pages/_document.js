@@ -62,8 +62,6 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" type="text/css" href="/static/styles/goodbye-master.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/index.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/animate.css"/>
-          <script src="/static/core.js"/>
-          <script src="/static/sw.js"/>
         </Head>
       )
     } else {
@@ -83,8 +81,6 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" type="text/css" href="/static/styles/master.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/index.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/animate.css"/>
-          <script src="/static/core.js"/>
-          <script src="/static/sw.js"/>
         </Head>
       )
     }
@@ -115,6 +111,8 @@ export default class MyDocument extends Document {
           </nav>
           <Main className="full-height"/>
           <NextScript/>
+          <script src="/static/core.js" defer></script>
+          <script src="/static/sw.js" defer></script>
         </body>
       </html>
     )

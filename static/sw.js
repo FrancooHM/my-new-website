@@ -9,12 +9,12 @@ this.addEventListener('activate', function(event) {
           // but remember that caches are shared across
           // the whole origin
         }).map(function(cacheName) {
-          return caches.delete(cacheName);
+          return caches.delete(cacheName)
         })
-      );
+      )
     })
-  );
-});
+  )
+})
 
 this.addEventListener('install', function(event) {
   event.waitUntil(
@@ -29,6 +29,14 @@ this.addEventListener('install', function(event) {
         '/static/core.js',
         '/static/favicon.ico',
       ])
+    })
+  )
+})
+
+this.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request)
     })
   )
 })
