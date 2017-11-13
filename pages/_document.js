@@ -55,8 +55,8 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
           <meta name="author" content="Franco Rabalgia"/>
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
-          <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+          <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
+          <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/normalize.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/goodbye-master.css"/>
@@ -76,8 +76,8 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
           <meta name="author" content="Franco Rabalgia"/>
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
-          <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+          <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
+          <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/normalize.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/master.css"/>
