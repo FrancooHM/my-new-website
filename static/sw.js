@@ -5,7 +5,6 @@ var urlsToCache = [
   '/static/styles/master.css',
   '/static/styles/goodbye-master.css',
   '/static/styles/goodbye.css',
-  '/static/core.js',
   '/static/favicon.ico',
 ]
 
