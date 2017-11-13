@@ -3,11 +3,8 @@ this.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
-          if (cacheName === 'v2') return true
-          else return false
-          // Return true if you want to remove this cache,
-          // but remember that caches are shared across
-          // the whole origin
+          if (cacheName !== 'v3') return false
+          else return true
         }).map(function(cacheName) {
           return caches.delete(cacheName)
         })
@@ -35,8 +32,13 @@ this.addEventListener('install', function(event) {
 
 this.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request)
+    caches.match(event.request).then(function(resp) {
+      return resp || fetch(event.request).then(function(response) {
+        return caches.open('v3').then(function(cache) {
+          cache.put(event.request, response.clone())
+          return response
+        })
+      })
     })
   )
 })
