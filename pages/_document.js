@@ -54,6 +54,7 @@ export default class MyDocument extends Document {
           <meta name="description" content="Franco Rabalgia Website"/>
           <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
           <meta name="author" content="Franco Rabalgia"/>
+          <meta name="theme-color" content="#000000"/>
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
           <link rel="manifest" href="/static/manifest.json"/>
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
@@ -74,6 +75,7 @@ export default class MyDocument extends Document {
           <meta name="description" content="Franco Rabalgia Website"/>
           <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
           <meta name="author" content="Franco Rabalgia"/>
+          <meta name="theme-color" content="#000000"/>
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
           <link rel="manifest" href="/static/manifest.json"/>
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
