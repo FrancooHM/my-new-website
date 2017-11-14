@@ -14,7 +14,6 @@
     "scripts": {
         "dev": "next",
         "build": "next build",
-        "start-next": "next start",
         "flow-init": "flow init",
         "start": "NODE_ENV=production pm2 start server.js",
         "list": "pm2 list",

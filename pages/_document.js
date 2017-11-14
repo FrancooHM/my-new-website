@@ -55,6 +55,7 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
           <meta name="author" content="Franco Rabalgia"/>
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+          <link rel="manifest" href="/static/manifest.json"/>
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
@@ -74,6 +75,7 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="developer,javascript,fullstack,lead,senior,engineer"/>
           <meta name="author" content="Franco Rabalgia"/>
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+          <link rel="manifest" href="/static/manifest.json"/>
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
@@ -111,8 +113,8 @@ export default class MyDocument extends Document {
           </nav>
           <Main className="full-height"/>
           <NextScript/>
-          <script src="/static/core.js" defer></script>
-          <script src="/static/sw.js" defer></script>
+          <script src="/core.js" defer></script>
+          <script src="/sw.js" defer></script>
         </body>
       </html>
     )
