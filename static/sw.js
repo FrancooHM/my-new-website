@@ -34,25 +34,6 @@ self.addEventListener('activate', function(event) {
   )
 })
 
-// self.addEventListener('fetch', function(event) {
-//   console.log("Service worker is hearing Fetching. Woh!!! ")
-//   event.respondWith(
-//
-//     caches.match(event.request).then(function(cachedResponse) {
-//
-//       if (cachedResponse)
-//         return cachedResponse
-//       else
-//         fetch(event.request).then(function(networkResponse) {
-//           return caches.open(FRESH_CACHE_NAME).then(function(cache) {
-//             cache.put(event.request, networkResponse.clone())
-//             return networkResponse
-//           })
-//         })
-//     })
-//   )
-// })
-
 self.addEventListener('fetch', function(event) {
   console.log("Service worker is hearing Fetching. Woh!!! ")
   event.respondWith(
@@ -70,5 +51,5 @@ self.addEventListener('fetch', function(event) {
         })
       }
     })
-  );
-});
+  )
+})

@@ -93,7 +93,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         {this.setHeaders(this.props.pathname)}
         <body>
           <nav id="__nav" className="animated fadeIn">
