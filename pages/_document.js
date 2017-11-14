@@ -59,7 +59,6 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/static/manifest.json"/>
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
-          <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/normalize.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/goodbye-master.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/index.css"/>
@@ -80,7 +79,6 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/static/manifest.json"/>
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
-          <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/normalize.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/master.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/index.css"/>
@@ -117,6 +115,7 @@ export default class MyDocument extends Document {
           <NextScript/>
           <script src="/core.js" defer></script>
           <script src="/sw.js" defer></script>
+          <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet" lazyload/>
         </body>
       </html>
     )
