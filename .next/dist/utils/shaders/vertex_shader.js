@@ -1,0 +1,4 @@
+"use strict";
+
+module.exports = "\n#ifdef GL_ES\nprecision mediump float;\n#endif\n\nuniform float r;\nuniform float g;\nuniform float b;\nattribute float vertexDisplacement;\nvoid main(){\n    vec3 p = position;\n    p.x = p.x + sin(vertexDisplacement) * 30.0;\n    p.y = p.y + cos(vertexDisplacement) * 30.0;\n    p.z = p.z + cos(vertexDisplacement) * 30.0;\n\n    vec4 modelViewPosition = modelViewMatrix * vec4(p ,1.0);\n    gl_Position = projectionMatrix * modelViewPosition;\n}\n";
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWxzL3NoYWRlcnMvdmVydGV4X3NoYWRlci5qcyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiOztBQUFBLE9BQU8sQUFBUCIsImZpbGUiOiJ2ZXJ0ZXhfc2hhZGVyLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9mcmFuY29hZ3VzdGlucmFiYWdsaWEvRGV2ZWxvcC9OZXh0IGFwcHMvbXktbmV3LXdlYnNpdGUifQ==
