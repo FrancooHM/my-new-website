@@ -2,8 +2,10 @@
     "dependencies": {
         "express": "^4.15.2",
         "flow": "^0.2.3",
-        "next": "4.0.3",
+        "glslify-loader": "^1.0.2",
+        "next": "^7.0.0",
         "pm2": "^2.7.2",
+        "raw-loader": "^0.5.1",
         "react": "16",
         "react-dom": "16",
         "react-no-ssr": "^1.1.0",

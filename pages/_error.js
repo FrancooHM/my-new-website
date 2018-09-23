@@ -1,17 +1,20 @@
 import React from 'react'
-export default class Error extends React.Component {
+import Error from 'next/error'
+
+export default class Page extends React.Component {
   static getInitialProps ({ res, jsonPageRes }) {
     const statusCode = res ? res.statusCode : (jsonPageRes ? jsonPageRes.status : null)
+    console.log("jsonPageRes")
+    console.log(JSON.stringify(jsonPageRes))
     return { statusCode }
   }
 
   render () {
-    return (
-      <p>{
-        this.props.statusCode
-        ? `An error ${this.props.statusCode} occurred on server`
-        : 'An error occurred on client'
-      }</p>
-    )
+    if (this.props.statusCode) {
+      return <Error>{`An error occurred: ${this.props.statusCode}`}</Error>;
+    }
+
+    return <Error>💩</Error>
+    
   }
 }
