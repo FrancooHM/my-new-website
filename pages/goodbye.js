@@ -24,9 +24,7 @@ export default class extends React.Component {
     return (
       <div>
         <Head>
-          <link rel="stylesheet"
-            type="text/css"
-            href="/static/styles/goodbye.css" />
+          <link rel="stylesheet" type="text/css" href="/static/styles/goodbye.css" />
         </Head>
         <div id="webgl-wrapper"> </div>
         <div className="magical-text-wrapper" >

@@ -1,6 +1,5 @@
 import Document, {Head, Main, NextScript} from 'next/document'
 import Link from 'next/link'
-import Router from 'next/router'
 
 export default class MyDocument extends Document {
 
@@ -113,8 +112,8 @@ export default class MyDocument extends Document {
           </nav>
           <Main className="full-height"/>
           <NextScript/>
-          <script src="/core.js" defer></script>
-          <script src="/sw.js" defer></script>
+          <script src="/static/core.js" defer></script>
+          <script src="/static/sw.js" defer></script>
           <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet" lazyload/>
         </body>
       </html>

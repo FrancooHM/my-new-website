@@ -3,7 +3,7 @@ const colors = [0x0000ff, 0x00ff00, 0xff0000, 0xf0f000, 0x00f0f0];
 const vertexShader = require('./shaders/vertex_shader');
 const fragmentShader = require('./shaders/fragment_shader');
 
-module.exports = (_this, window, document) => {
+export default (_this, window, document) => {
     return () => {
         // SETTING UP SCENE AND PERSPECTIVE MATRIX
         const self = _this
