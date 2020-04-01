@@ -1,14 +1,16 @@
-# Run
+# Workflow 
+
+## Run
 npm run dev
 
-# Build
+## Build
 npm run build
 
-# Versioning
+## Versioning
 Update the sw.js constant FRESH_CACHE_NAME to let the service worker invalidate old cache
 
-# Deploy
-Deploy S3 bucket and invalidate Cloudfront path /*
+## Deploy
+Push and pull from remote ec2 instance
 
-# Restart server
+## Restart
 pm2 restart server
