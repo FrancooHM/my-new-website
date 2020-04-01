@@ -29,8 +29,8 @@ function shadershit() {
 
 export default async function fftFx() {
 
-    const recorder = await AudioManager.setupAudioContext();
-    const repo = SceneFactory.create.bind(this)(CAMERA_Z_DISTANCE, window.innerWidth,  window.innerHeight);
+    // const recorder = await AudioManager.setupAudioContext();
+    // const repo = SceneFactory.create.bind(this)(CAMERA_Z_DISTANCE, window.innerWidth,  window.innerHeight);
 
     //APPENDING CANVAS TO THE DOM
     document.getElementById('webgl-wrapper').appendChild(repo.renderer.domElement)
@@ -45,11 +45,11 @@ export default async function fftFx() {
 
     this.audiodata = []
     //SETTING THE MEDIA STREAM COLLECTOR
-    recorder.ondataavailable = (e) => {
-        this.audiodata.push(e.data.size)
-    }
+    // recorder.ondataavailable = (e) => {
+    //     this.audiodata.push(e.data.size)
+    // }
     //STARTING MIC RECORDER
-    recorder.start(50);
+    // recorder.start(50);
     //STARTING ANIMATION
     Core.startAnimation.bind(this)(0, redraw, shadershit)
 }

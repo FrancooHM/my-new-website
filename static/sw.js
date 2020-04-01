@@ -3,12 +3,11 @@ var urlsToCache = [
   '/static/styles/index.css',
   '/static/styles/normalize.css',
   '/static/styles/master.css',
-  '/static/styles/goodbye-master.css',
   '/static/styles/goodbye.css',
   '/static/favicon.ico',
 ]
 
-var FRESH_CACHE_NAME = 'NEXT_1.6'
+var FRESH_CACHE_NAME = 'NEXT_1.7'
 
 self.addEventListener('install', function(event) {
   console.log("Service worker installed. Don't take care about this... ")
