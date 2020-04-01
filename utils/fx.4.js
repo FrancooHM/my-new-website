@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-const colors = [0x0000ff, 0x00ff00, 0xff0000, 0xf0f000, 0x00f0f0];
-const vertexShader = require('./shaders/vertex_shader_2');
-const fragmentShader = require('./shaders/fragment_shader_2');
+
+const vertexShader = require('./shaders/vertex_shader');
+const fragmentShader = require('./shaders/fragment_shader');
 
 function mobileCheck() {
     var check = 1;
@@ -19,9 +19,10 @@ export default (_this, window, document) => {
         const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 7000)
         const scene = new THREE.Scene()
 
+        //SETTING UP SHITTY THINGS LIKE FOG AND LIGHTS
         // SETTING UP GEOMETRY AND MATERIAL
-        const ico1Size = 300 / mobileCheck();
-        const ico2Size = 100 / mobileCheck();
+        const ico1Size = 200 / mobileCheck();
+        const ico2Size = 50 / mobileCheck();
         const icosaedronGeometry1 = new THREE.IcosahedronGeometry(ico1Size, 0);
         const icosaedronGeometry2 = new THREE.IcosahedronGeometry(ico2Size, 1);
         const lineSegmentsGeometry1 = new THREE.EdgesGeometry(icosaedronGeometry1);
@@ -113,29 +114,32 @@ export default (_this, window, document) => {
         }, animate)
 
         var fixIco = false;
-        var upsideDown = false;
+
         setInterval(() => {
             fixIco = !fixIco;
         }, 4000);
-        setInterval(() => {
-            upsideDown = !upsideDown;
-        }, 3000);
 
-        function animate(t) {
-            let deltaColor = t * 0.0025
+        let animationWindow = 20;
+        let animationCounter = 0;
+        function animate(t = 0) {
+            let deltaColor = t * 0.0025;
             let delta1 = t * 0.00025
             let delta2 = t * 0.0007875
 
             requestAnimationFrame(animate);
 
             self.state.mesh1.quaternion.setFromEuler(new THREE.Euler(delta1, delta1 * 2, 0));
-            self.state.mesh2.material.uniforms.r.value = Math.sin(deltaColor);
-            self.state.mesh2.material.uniforms.g.value = Math.cos(deltaColor);
-            self.state.mesh2.material.uniforms.b.value = Math.tan(deltaColor);
+            self.state.mesh2.material.uniforms.r.value = Math.sin(deltaColor + 0);
+            self.state.mesh2.material.uniforms.g.value = Math.sin(deltaColor + 90);
+            self.state.mesh2.material.uniforms.b.value = Math.sin(deltaColor + 180);
             
-            self.state.mesh2.scale.x = upsideDown ? self.state.mesh2.scale.x * (Math.sin(t)/10 + 1) : self.state.mesh2.scale.x ;
-            self.state.mesh2.scale.y = upsideDown ? self.state.mesh2.scale.y * (Math.sin(t)/10 + 1) : self.state.mesh2.scale.y ;
-            self.state.mesh2.scale.z = upsideDown ? self.state.mesh2.scale.z * (Math.sin(t)/10 + 1) : self.state.mesh2.scale.z ;
+            if (animationCounter % animationWindow === 0){
+                self.state.mesh2.scale.x = Math.max(self.state.mesh2.scale.x * (Math.tan(t)/10 + 1), 0.35);
+                self.state.mesh2.scale.y = Math.max(self.state.mesh2.scale.y * (Math.tan(t)/10 + 1), 0.35);
+                self.state.mesh2.scale.z = Math.max(self.state.mesh2.scale.z * (Math.tan(t)/10 + 1), 0.35);
+            }
+
+            animationCounter++;
 
             let repetitive = Math.floor(t / 1000) % 5;
             let noise = repetitive === 0;

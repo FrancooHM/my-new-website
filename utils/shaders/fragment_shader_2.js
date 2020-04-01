@@ -8,6 +8,6 @@ uniform float g;
 uniform float b;
 
 void main() {
-	gl_FragColor = vec4(gl_FragCoord.x / 1400.0, gl_FragCoord.y / 1400.0, gl_FragCoord.z, 1);
+	gl_FragColor = vec4(r,g,b,1.0);
 }
 `

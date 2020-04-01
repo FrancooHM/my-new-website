@@ -1,6 +1,39 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    font-family: "Rubik", Arial, Helvetica;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: black;
+}
+
 html, body, #__next, body div{
   width: 100%;
-  height: 100%
+  height: 100%;
+}
+
+h1::selection {
+  color: rgb(28, 255, 217);
+  background-color: #000;
+}
+h1::-moz-selection {
+  color: rgb(28, 255, 217);
+  background-color: #000;
+}
+
+::selection {
+  color: rgb(223, 71, 164);
+  background-color: #000;
+}
+::-moz-selection {
+  color: rgb(223, 71, 164);
+  background-color: #000;
 }
 
 canvas {
@@ -15,13 +48,20 @@ canvas {
 .fluid-center {
   /*This is because the overflow hidden, is not rendering 2ems of window (because of the navbar button padding)*/
   /*and flex is centering without taking care of that*/
-  margin-top: -15%;
+  margin-top: -10%;
 }
 
 h1, h3, h6 {
-  text-align: center;
   font-family: "Rubik", Arial, Helvetica;
   font-weight: 400;
+}
+
+#__next,
+#__next div {
+    min-height: 100%;
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 640px) {

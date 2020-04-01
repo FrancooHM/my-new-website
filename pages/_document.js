@@ -47,7 +47,6 @@ export default class MyDocument extends Document {
     if (pathname === "/goodbye") {
       return (
         <Head>
-          <title>Goodbye | Franco Rabglia Website</title>
           <meta name="robots" content="Index follow"/>
           <meta name="title" content="Franco Rabglia Website"/>
           <meta name="description" content="Franco Rabalgia Website"/>
@@ -59,7 +58,7 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/normalize.css"/>
-          <link rel="stylesheet" type="text/css" href="/static/styles/goodbye-master.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/styles/goodbye.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/index.css"/>
           <link rel="stylesheet" type="text/css" href="/static/styles/animate.css"/>
         </Head>
@@ -67,7 +66,6 @@ export default class MyDocument extends Document {
     } else {
       return (
         <Head>
-          <title>Hi | Franco Rabglia Website</title>
           <meta name="robots" content="Index follow"/>
           <meta name="title" content="Franco Rabglia Website"/>
           <meta name="description" content="Franco Rabalgia Website"/>
@@ -96,7 +94,7 @@ export default class MyDocument extends Document {
           <nav id="__nav" className="animated fadeIn">
             <div className={"button " + this.props.active.home}>
               <Link prefetch href="/" as="/">
-                <a>HOME</a>
+                <a>ME</a>
               </Link>
             </div>
             <div className={"button " + this.props.active.contact}>
@@ -111,6 +109,7 @@ export default class MyDocument extends Document {
             </div>
           </nav>
           <Main className="full-height"/>
+          <div className="version">v2.1</div>
           <NextScript/>
           <script src="/static/core.js" defer></script>
           <script src="/static/sw.js" defer></script>
