@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "jsfft": "0.0.4",
-    "next": "^8.0.3",
+    "next": "^9.3.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "three": "^0.84.0"
