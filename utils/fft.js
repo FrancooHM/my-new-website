@@ -30,7 +30,7 @@ function shadershit() {
 export default async function fftFx() {
 
     // const recorder = await AudioManager.setupAudioContext();
-    // const repo = SceneFactory.create.bind(this)(CAMERA_Z_DISTANCE, window.innerWidth,  window.innerHeight);
+    const repo = SceneFactory.create.bind(this)(CAMERA_Z_DISTANCE, window.innerWidth,  window.innerHeight);
 
     //APPENDING CANVAS TO THE DOM
     document.getElementById('webgl-wrapper').appendChild(repo.renderer.domElement)

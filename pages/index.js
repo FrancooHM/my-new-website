@@ -22,7 +22,7 @@ export default class extends React.Component {
                             <u>source</u>
                         </a>
                     </h6>
-                    <h4><a href='https://www.clandestina.com.ar/delivery' target="_blank">I design beer and operate at my own brewery. 🍻</a></h4>
+                    <h4><a href='https://www.clandestina.com.ar/delivery' target="_blank">I design beer and operate at Clandestina Brewery. 🍻</a></h4>
                     {/* <h4>I write node.js and react everyday.</h4>
                     <h4>I think fullstack architectures.</h4>
                     <h4>I studied software engineering.</h4>
