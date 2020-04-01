@@ -8,7 +8,7 @@ var urlsToCache = [
   '/static/favicon.ico',
 ]
 
-var FRESH_CACHE_NAME = 'NEXT_1.5'
+var FRESH_CACHE_NAME = 'NEXT_1.6'
 
 self.addEventListener('install', function(event) {
   console.log("Service worker installed. Don't take care about this... ")
